@@ -1,9 +1,9 @@
 PYTHON="python3"
-COMPILER="teenytiny.py"
+COMPILER="main.py"
 CC="gcc"
 
 function comp {
-    BN=$(basename -s .teeny $1)
+    BN=$(basename -s .simp $1)
     TTOUTPUT=$(${PYTHON} ${COMPILER} $1 2>&1)
     if [ $? -ne 0 ]; then
         echo "${TTOUTPUT}"

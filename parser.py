@@ -232,7 +232,7 @@ class Parser:
             self.next_token()
         elif self.check_token(TokenType.IDENT):
             if self.current_token.text not in self.symbols:
-                self.abort('Referencing variable before assignment: ' + self.check_token.text)
+                self.abort('Referencing variable before assignment: ' + self.current_token.text)
             self.emitter.emit(self.current_token.text)
             self.next_token()
         else:
